@@ -14,10 +14,7 @@
 
 <style lang="scss">
 	main {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		position: relative;
 		height: 100%;
 	}
 

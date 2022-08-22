@@ -1,23 +1,9 @@
-<script context="module" lang="ts">
-	export const load: Load = ({ url }) => ({
-		props: { url }
-	})
-</script>
-
 <script lang="ts">
-	import type { Load } from '@sveltejs/kit'
-
 	import MetaBase from '../components/Meta/Base.svelte'
-	import PageTransition from '../components/Transition/Page.svelte'
-
-	export let url: URL
 </script>
 
 <MetaBase />
-
-<PageTransition {url}>
-	<slot />
-</PageTransition>
+<slot />
 
 <style lang="scss" global>
 	*,
@@ -34,6 +20,10 @@
 	html,
 	body {
 		height: 100%;
+	}
+
+	body {
+		overflow: hidden;
 	}
 
 	a {
